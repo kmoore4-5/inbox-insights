@@ -45,7 +45,7 @@ def create_app() -> Flask:
 
     # --- S3 settings ---
     app.config["UPLOADS_BUCKET"] = os.environ.get("UPLOADS_BUCKET", "kelan-chris-email-pipeline")
-    app.config["UPLOADS_PREFIX"] = os.environ.get("UPLOADS_PREFIX", "rawData/customers")
+    app.config["UPLOADS_PREFIX"] = os.environ.get("UPLOADS_PREFIX", "/raw_data/customers")
     app.config["AWS_REGION"] = os.environ.get("AWS_REGION")
 
     # Single S3 client. With an EC2 instance role, no keys are needed.
